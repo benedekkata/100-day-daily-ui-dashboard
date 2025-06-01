@@ -1,54 +1,131 @@
-# React + TypeScript + Vite
+# Daily UI Dashboard - Daily UI Challenge Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-brightgreen?style=for-the-badge)](https://benedekkata.github.io/100-day-daily-ui-dashboard/)
 
-Currently, two official plugins are available:
+A personal dashboard to track and showcase my solutions to the [Daily UI challenges](https://dailyui.co/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!--
+  **✨ Add a Screenshot later✨**
+-->
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Displays a collection of completed Daily UI challenges.
+- Individual, routable pages for each challenge solution.
+- Responsive design for various screen sizes.
+- Modern UI built with ShadCn/UI components.
+- Type-safe routing with TanStack Router.
+- Fast development and build times powered by Vite.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Framework:** [React](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [ShadCn/UI](https://ui.shadcn.com/)
+- **Routing:** [TanStack Router (@tanstack/react-router)](https://tanstack.com/router/v1/docs/overview)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Deployment:** [GitHub Pages](https://pages.github.com/) via [GitHub Actions](https://github.com/features/actions)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏁 Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), or [pnpm](https://pnpm.io/)
+
+### Installation & Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY_NAME>.git
+   cd <YOUR_REPOSITORY_NAME>
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   # yarn install
+   # or
+   # pnpm install
+   ```
+
+3. **Run the development server:**
+   The app will be available at `http://localhost:5173` (or another port if 5173 is busy).
+
+   ```bash
+   npm run dev
+   # or
+   # yarn dev
+   # or
+   # pnpm dev
+   ```
+
+4. **Build for production:**
+   This will create a `dist` folder with the optimized build artifacts.
+
+   ```bash
+   npm run build
+   # or
+   # yarn build
+   # or
+   # pnpm build
+   ```
+
+## 🚀 Deployment
+
+This project is automatically deployed to GitHub Pages whenever changes are pushed to the `main` branch. The deployment process is handled by a GitHub Actions workflow defined in `.github/workflows/deploy.yml`.
+
+The live site is available at: `https://benedekkata.github.io/100-day-daily-ui-dashboard/`
+
+## 📁 Project Structure (Brief Overview)
+
+100-day-daily-ui-dashboard/
+├── .github/workflows/ # GitHub Actions CI/CD configuration
+├── public/ # Static assets
+├── src/
+│ ├── components/ # Shared UI components (including ShadCn/UI)
+│ │ └── ui/ # ShadCn generated components
+│ ├── challenges/ # Components for each specific Daily UI challenge solution
+│ ├── lib/ # Utility functions (e.g., ShadCn's utils.ts)
+│ ├── routes/ # Route-specific components (layouts, pages)
+│ ├── main.tsx # Application entry point, router setup
+│ ├── index.css # Global styles, Tailwind directives
+| ├── vite-env.d.ts
+| └── routeTree.gen.ts # Auto generated routes (TanStack Router)
+├── .gitignore
+├── index.html # Main HTML entry point for Vite
+├── package.json
+├── package-lock.json
+├── README.md
+├── vite.config.ts
+├── eslint.config.js
+└── tsconfig.json # TypeScript configuration
+
+## ©️ Copyright and Usage
+
+Copyright (c) 2025 benedekkata. All Rights Reserved.
+
+The source code for the individual UI components developed as part of the Daily UI challenges within this project is proprietary. While this repository is public for demonstration and portfolio purposes, and you are welcome to view the code for educational insights, **you are not granted a license to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of these specific components for your own projects without explicit prior written permission from the copyright holder.**
+
+The overall application structure, build configurations, and the showcase concept itself may be referenced for learning purposes. However, the creative work embodied in the challenge solutions is intended for display here and not for open-source reuse unless explicitly stated otherwise for a particular component.
+
+## 🙏 Acknowledgements
+
+- [Daily UI](https://dailyui.co/) for the design challenges and inspiration.
+- The creators and maintainers of React, Vite, Tailwind CSS, ShadCn/UI, and TanStack Router.
+
+## 👤 Author
+
+- Katalin Benedek
+- GitHub: [@benedekkata](https://github.com/benedekkata)
+- LinkedIn: [Katalin Benedek](https://www.linkedin.com/in/katalin-benedek/)
+
+---
+
+Made with ❤️ and code.
