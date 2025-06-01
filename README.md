@@ -41,8 +41,8 @@ These instructions will get you a copy of the project up and running on your loc
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY_NAME>.git
-   cd <YOUR_REPOSITORY_NAME>
+   git clone https://github.com/benedekkata/100-day-daily-ui-dashboard.git
+   cd 100-day-daily-ui-dashboard
    ```
 
 2. **Install dependencies:**
@@ -85,6 +85,7 @@ The live site is available at: `https://benedekkata.github.io/100-day-daily-ui-d
 
 ## 📁 Project Structure (Brief Overview)
 
+```text
 100-day-daily-ui-dashboard/
 ├── .github/workflows/ # GitHub Actions CI/CD configuration
 ├── public/ # Static assets
@@ -106,6 +107,7 @@ The live site is available at: `https://benedekkata.github.io/100-day-daily-ui-d
 ├── vite.config.ts
 ├── eslint.config.js
 └── tsconfig.json # TypeScript configuration
+```
 
 ## ©️ Copyright and Usage
 

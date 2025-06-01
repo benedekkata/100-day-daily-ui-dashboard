@@ -20,9 +20,9 @@ export default defineConfig(({ command }) => {
     base: "/",
   };
 
-  if (command === "build") {
-    config.base = "/100-day-daily-ui-dashboard/";
-  }
+  // if (command === "build") {
+  //   config.base = "/100-day-daily-ui-dashboard/";
+  // }
 
   return config;
 });
