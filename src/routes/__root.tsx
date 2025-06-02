@@ -4,6 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { ModeToggle } from "@/components/mode-toggle";
+import appLogo from "@/assets/logo.svg";
 
 export const Route = createRootRoute({
   component: () => (
@@ -12,7 +13,7 @@ export const Route = createRootRoute({
         <header className="border-b">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link to="/" className="flex items-center gap-4 text-xl font-bold">
-              <img src="/logo.svg" alt="My Custom Icon" className="h-10 w-10" />
+              <img src={appLogo} alt="My Custom Icon" className="h-10 w-10" />
               Daily UI Dashboard
             </Link>
             <div className="flex items-center gap-4">
