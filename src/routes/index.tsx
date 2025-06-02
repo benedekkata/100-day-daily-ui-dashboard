@@ -38,7 +38,7 @@ function Dashboard() {
           A personal showcase of my solutions to the Daily UI challenges. Each
           challenge pushes the boundaries of design and development.
         </p>
-        <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+        <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground flex-col md:flex-row">
           <div className="flex items-center gap-2">
             <Trophy className="h-4 w-4" />
             <span>{completedChallenges.length} Completed</span>

@@ -14,7 +14,7 @@ export const Route = createRootRoute({
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link to="/" className="flex items-center gap-4 text-xl font-bold">
               <img src={appLogo} alt="My Custom Icon" className="h-10 w-10" />
-              Daily UI Dashboard
+              <span className="hidden md:block">Daily UI Dashboard</span>
             </Link>
             <div className="flex items-center gap-4">
               <Button variant="ghost" size="sm" asChild>

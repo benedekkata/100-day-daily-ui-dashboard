@@ -111,7 +111,17 @@ function ChallengeDetail() {
               </div>
             </CardContent>
           </Card>
-
+          {/* Challenge Notes */}
+          {challenge.notes && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Challenge Notes</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">{challenge.notes}</p>
+              </CardContent>
+            </Card>
+          )}
           {/* Challenge Details */}
           <Card>
             <CardHeader>
