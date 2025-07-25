@@ -109,13 +109,9 @@ The live site is available at: `https://benedekkata.github.io/100-day-daily-ui-d
 └── tsconfig.json # TypeScript configuration
 ```
 
-## ©️ Copyright and Usage
+## License
 
-Copyright (c) 2025 benedekkata. All Rights Reserved.
-
-The source code for the individual UI components developed as part of the Daily UI challenges within this project is proprietary. While this repository is public for demonstration and portfolio purposes, and you are welcome to view the code for educational insights, **you are not granted a license to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of these specific components for your own projects without explicit prior written permission from the copyright holder.**
-
-The overall application structure, build configurations, and the showcase concept itself may be referenced for learning purposes. However, the creative work embodied in the challenge solutions is intended for display here and not for open-source reuse unless explicitly stated otherwise for a particular component.
+This project is proprietary. See [LICENSE](./LICENSE) for details.
 
 ## 🙏 Acknowledgements
 

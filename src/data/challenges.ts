@@ -1,4 +1,4 @@
-import Day1Modal from "@/components/solutions/day-1-modal";
+import Day1Modal from "@/components/solutions/day1/day-1-modal";
 export interface Challenge {
   id: string;
   day: number;

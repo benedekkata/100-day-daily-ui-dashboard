@@ -1,0 +1,12 @@
+All Rights Reserved (Proprietary)
+
+Copyright (c) 2025 Katalin Benedek.
+All rights reserved.
+
+The source code for the individual UI components developed as part of the Daily UI challenges within this project is proprietary. 
+While this repository is public for demonstration and portfolio purposes, and you are welcome to view the code for educational insights, you are not granted a license to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of these specific components for your own projects without explicit prior written permission from the copyright holder.
+
+The overall application structure, build configurations, and the showcase concept itself may be referenced for learning purposes. 
+However, the creative work embodied in the challenge solutions is intended for display here and not for open-source reuse unless explicitly stated otherwise for a particular component.
+
+For licensing inquiries, contact: benedek.kata99@gmail.com
