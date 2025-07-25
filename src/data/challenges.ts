@@ -454,4 +454,12 @@ export const challenges: Challenge[] = [
       "Design a Confirmation UI element. What's being confirmed? Is it confirming an address, order, shipping, plane tickets, hotel reservation, dinner reservation, booking tickets to the opera, or something else? Also consider where it's occurring (i.e. website, mobile app, email confirmation, etc.)",
     status: "not-started",
   },
+  {
+    id: "day-55",
+    day: 55,
+    title: "Icon Set",
+    description:
+      "Create some icons to be used together. It could be for a taskbar, showcasing features or services, or even for something like a shopping app. (Icons might be a cart, a shipping box, a size icon, etc.)",
+    status: "not-started",
+  },
 ];
