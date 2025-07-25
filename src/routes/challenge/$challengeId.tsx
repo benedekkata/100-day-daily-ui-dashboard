@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { challenges } from "@/data/challenges";
+import { getImageUrl } from "@/lib/utils";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -89,28 +90,25 @@ function ChallengeDetail() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-2 space-y-8">
-          {/* Challenge Image/Preview */}
+          {/* Challenge Preview */}
           <Card>
             <CardHeader>
               <CardTitle>Solution Preview</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-                {challenge.image ? (
-                  <img
-                    src={challenge.image || "/placeholder.svg"}
-                    alt={challenge.title}
-                    className="w-full h-full object-cover"
-                  />
+                {challenge.component ? (
+                  <challenge.component />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-muted-foreground">
                     <Palette className="h-12 w-12" />
-                    <span className="ml-4">Preview coming soon...</span>
+                    <span className="ml-4">Solution coming soon...</span>
                   </div>
                 )}
               </div>
             </CardContent>
           </Card>
+
           {/* Challenge Notes */}
           {challenge.notes && (
             <Card>
@@ -122,6 +120,30 @@ function ChallengeDetail() {
               </CardContent>
             </Card>
           )}
+
+          {/* Challenge Design Image */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Design</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {challenge.image ? (
+                <img
+                  src={getImageUrl(challenge.image)}
+                  alt={challenge.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                    <Palette className="h-12 w-12" />
+                    <span className="ml-4">Preview coming soon...</span>
+                  </div>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+
           {/* Challenge Details */}
           <Card>
             <CardHeader>

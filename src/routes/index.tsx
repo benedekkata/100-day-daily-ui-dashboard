@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { getImageUrl } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
   component: Dashboard,
@@ -97,95 +98,99 @@ function Dashboard() {
 
       {/* Challenge Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {challenges.map((challenge) => (
-          <Card
-            key={challenge.id}
-            className="group hover:shadow-lg transition-shadow hover:scale-105 transition-transform cursor-pointer"
-            onClick={() =>
-              navigate({
-                to: "/challenge/$challengeId",
-                params: { challengeId: challenge.id },
-              })
-            }
-          >
-            <CardHeader>
-              <div className="flex items-start justify-between">
-                <div>
-                  <CardTitle className="text-lg">Day {challenge.day}</CardTitle>
-                  <CardDescription className="font-medium">
-                    {challenge.title}
-                  </CardDescription>
-                </div>
-                <Badge
-                  variant={
-                    challenge.status === "completed"
-                      ? "default"
-                      : challenge.status === "in-progress"
-                        ? "secondary"
-                        : "outline"
-                  }
-                >
-                  {challenge.status === "completed"
-                    ? "Done"
-                    : challenge.status === "in-progress"
-                      ? "WIP"
-                      : "Todo"}
-                </Badge>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
-                {challenge.image ? (
-                  <img
-                    src={challenge.image || "/placeholder.svg"}
-                    alt={challenge.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                    <Palette className="h-8 w-8" />
+        {challenges
+          .sort((a, b) => b.day - a.day)
+          .map((challenge) => (
+            <Card
+              key={challenge.id}
+              className="group hover:shadow-lg transition-shadow hover:scale-105 transition-transform cursor-pointer"
+              onClick={() =>
+                navigate({
+                  to: "/challenge/$challengeId",
+                  params: { challengeId: challenge.id },
+                })
+              }
+            >
+              <CardHeader>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-lg">
+                      Day {challenge.day}
+                    </CardTitle>
+                    <CardDescription className="font-medium truncate">
+                      {challenge.title}
+                    </CardDescription>
                   </div>
-                )}
-              </div>
-              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                {challenge.description}
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <Calendar className="h-3 w-3" />
-                  {challenge.completedDate || "Not completed"}
+                  <Badge
+                    variant={
+                      challenge.status === "completed"
+                        ? "default"
+                        : challenge.status === "in-progress"
+                          ? "secondary"
+                          : "outline"
+                    }
+                  >
+                    {challenge.status === "completed"
+                      ? "Done"
+                      : challenge.status === "in-progress"
+                        ? "WIP"
+                        : "Todo"}
+                  </Badge>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" asChild>
-                    <Link
-                      to="/challenge/$challengeId"
-                      params={{ challengeId: challenge.id }}
-                    >
-                      <Eye className="h-3 w-3 mr-1" />
-                      View
-                    </Link>
-                  </Button>
-                  {challenge.status === "completed" && (
-                    <>
-                      {challenge.codeUrl && (
-                        <Button size="sm" variant="outline" asChild>
-                          <a
-                            href={challenge.codeUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Code className="h-3 w-3 mr-1" />
-                            Code
-                          </a>
-                        </Button>
-                      )}
-                    </>
+              </CardHeader>
+              <CardContent>
+                <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
+                  {challenge.image ? (
+                    <img
+                      src={getImageUrl(challenge.image)}
+                      alt={challenge.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                      <Palette className="h-8 w-8" />
+                    </div>
                   )}
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                  {challenge.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <Calendar className="h-3 w-3" />
+                    {challenge.completedDate || "Not completed"}
+                  </div>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" asChild>
+                      <Link
+                        to="/challenge/$challengeId"
+                        params={{ challengeId: challenge.id }}
+                      >
+                        <Eye className="h-3 w-3 mr-1" />
+                        View
+                      </Link>
+                    </Button>
+                    {challenge.status === "completed" && (
+                      <>
+                        {challenge.codeUrl && (
+                          <Button size="sm" variant="outline" asChild>
+                            <a
+                              href={challenge.codeUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Code className="h-3 w-3 mr-1" />
+                              Code
+                            </a>
+                          </Button>
+                        )}
+                      </>
+                    )}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
       </div>
     </div>
   );
