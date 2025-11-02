@@ -10,7 +10,6 @@ export interface Challenge {
   image?: string;
   liveUrl?: string;
   codeUrl?: string;
-  technologies?: string[];
   learnings?: string[];
   challenges?: string[];
   notes?: string;
@@ -24,9 +23,15 @@ export const challenges: Challenge[] = [
     title: "Sign Up",
     description:
       "Create a sign up page, modal, form, or app screen related to signing up for something. It could be for a volunteer event, contest registration, a giveaway, or anything you can image.",
-    status: "in-progress",
+    status: "completed",
+    completedDate: "2025-07-25",
+    timeSpent: "~4 hours",
+    learnings: [""],
+    challenges: [""],
+    liveUrl: "",
+    codeUrl: "",
     notes:
-      "Project: Cosmic Explorers Club - Newsletter; A weekly newsletter delivering facts, stunning images, and updates about space exploration, astronomy, and recent discoveries. Sign Up for exclusive content, early access to interviews with astronomers, and printable star charts.",
+      "Project: Cosmic Explorers Club - Newsletter sign up modal; A weekly newsletter delivering facts, stunning images, and updates about space exploration, astronomy, and recent discoveries.",
     component: Day1Modal,
     image: "day1.png",
   },
@@ -460,6 +465,366 @@ export const challenges: Challenge[] = [
     title: "Icon Set",
     description:
       "Create some icons to be used together. It could be for a taskbar, showcasing features or services, or even for something like a shopping app. (Icons might be a cart, a shipping box, a size icon, etc.)",
+    status: "not-started",
+  },
+  {
+    id: "day-56",
+    day: 56,
+    title: "Breadcrumbs",
+    description:
+      "Every interaction on a website or within an app is an opportunity. Although a seemingly small detail, breadcrumbs are very necessary and yet often neglected in terms of their appearance and functionality. To truly achieve great design sense you need to consider even the smallest details.",
+    status: "not-started",
+  },
+  {
+    id: "day-57",
+    day: 57,
+    title: "Video Player",
+    description:
+      "Design a video play with all the functions needed: volume, skip, fast forward, etc. Depending on the device you'll want to consider different needs such as inputs for a TV (HDMI 1, etc.) or hover effects for a remote cursor.",
+    status: "not-started",
+  },
+  {
+    id: "day-58",
+    day: 58,
+    title: "Shopping cart",
+    description:
+      "Some brands use a cart or bag during their checkout process. Consider the products, prices, and placement of any other required data. Do people need to create an account? Checkout as a guest? Is there shipping?",
+    status: "not-started",
+  },
+  {
+    id: "day-59",
+    day: 59,
+    title: "Background Pattern",
+    description:
+      "Whether an e-commerce site, a blogs, or a landing page, backgrounds are often unnoticed. How can you design a useful and beautiful one? Video background? Moving patterns or textures? You decide. ",
+    status: "not-started",
+  },
+  {
+    id: "day-60",
+    day: 60,
+    title: "Color Picker",
+    description:
+      "What is the user doing? Designing a website? Selecting a t-shirt color? Colors are an important part of product design and making it simple to select great color schemes is crucial. ",
+    status: "not-started",
+  },
+  {
+    id: "day-61",
+    day: 61,
+    title: "Redeem Coupon",
+    description:
+      "Imagine that it's time for someone to redeem a coupon. It could be via an in person self-checkout screen or on a website. Think about the requirements of a coupon such as the discount percentage, the subtotal, total, and other unique features.Always make it easy. The last thing people want to encounter is a complex interface that adds friction to the redemption process.",
+    status: "not-started",
+  },
+  {
+    id: "day-62",
+    day: 62,
+    title: "Sign Up Form",
+    description:
+      "Create a sign up page, modal, form, or app screen related to signing up for something. It could be for a volunteer event, contest registration, a giveaway, or anything you can image.",
+    status: "not-started",
+  },
+  {
+    id: "day-63",
+    day: 63,
+    title: "Best Of",
+    description:
+      "“Best of” lists can be used for featured news articles, “best of …” city magazines, top selling products, best selling books, etc. What's best, why, and how will you display it? ",
+    status: "not-started",
+  },
+  {
+    id: "day-64",
+    day: 64,
+    title: "User Selection",
+    description:
+      "Create a modal, page, toggle, or some other element to represent the selection of a user profile. It could be inside a video app, managing multiple social media accounts, a video game, or something totally unique. ",
+    status: "not-started",
+  },
+  {
+    id: "day-65",
+    day: 65,
+    title: "Notes Widget",
+    description:
+      "We all need to record a note at some point. Whether it's a full page document, a small shopping list, or a note inside of an app Create a widget to incorporate a notes feature. ",
+    status: "not-started",
+  },
+  {
+    id: "day-66",
+    day: 66,
+    title: "Statistics",
+    description:
+      "Applications used for finance, engineering, sports, and even video games have tons of statistics.Design something to show off the top statistics.",
+    status: "not-started",
+  },
+  {
+    id: "day-67",
+    day: 67,
+    title: "Hotel or Vacation Rental Booking",
+    description:
+      "Create a website, listing page, or booking reservation UI for a vacation property. Consider extra elements: non-smoking rooms, security deposits, amenities, etc.",
+    status: "not-started",
+  },
+  {
+    id: "day-68",
+    day: 68,
+    title: "Flight Search",
+    description:
+      "Design an app or website for either searching for flights or comparing options. Consider the variables: one-way, roundtrip, or multi-stop flight? Baggage fees? Making a lot of data look simple isn't easy, but it's what your users will appreciate. Millions of people travel everyday so every little detail makes a difference. ",
+    status: "not-started",
+  },
+  {
+    id: "day-69",
+    day: 69,
+    title: "Trending",
+    description:
+      "Create a trending list or feature. What's trending? Music, movies, stock prices, or something else? Think about if it'll be the main focus or a minimal element such as a scrolling banner or notification widget.",
+    status: "not-started",
+  },
+  {
+    id: "day-70",
+    day: 70,
+    title: "Event Listing",
+    description:
+      "Design a feature or display for upcoming events. Concerts, workshops, summer camps, seminars, or other training events. Get creative with the purpose and style.",
+    status: "not-started",
+  },
+  {
+    id: "day-71",
+    day: 71,
+    title: "Scheduling",
+    description:
+      "Design elements or a full experience for a schedule. It could be for a hospital to schedule patients, a bank to schedule payments, a band's concert schedule or anything.",
+    status: "not-started",
+  },
+  {
+    id: "day-72",
+    day: 72,
+    title: "Slider",
+    description:
+      "Create a slider design. It could be to swipe between photos in a property listing app, dating profiles, display album artwork, or a traditional slider for volume or settings.",
+    status: "not-started",
+  },
+  {
+    id: "day-73",
+    day: 73,
+    title: "Virtual Reality",
+    description:
+      "A headset, a screen, or the virtual controls required. Small screen real estate requires more hand gestures so be intuitive.",
+    status: "not-started",
+  },
+  {
+    id: "day-74",
+    day: 74,
+    title: "App Download",
+    description:
+      "Create a download page, modal, form, or  screen related to downloading something. It could be for a volunteer event, contest registration, or anything you can image requiring a download.",
+    status: "not-started",
+  },
+  {
+    id: "day-75",
+    day: 75,
+    title: "Pre-Order",
+    description:
+      "Design a page or element to encourage pre-orders for something. It could be an upcoming book, movie, website template, etc. ",
+    status: "not-started",
+  },
+  {
+    id: "day-76",
+    day: 76,
+    title: "Loading",
+    description:
+      "What's loading? It could be a website, a movie buffering, or a super fun animation for a video game loading.",
+    status: "not-started",
+  },
+  {
+    id: "day-77",
+    day: 77,
+    title: "Thank You (Page or Message)",
+    description:
+      "Thank users for downloading your app or a free eBook. Your design can be simple or funny with a GIF. :) ",
+    status: "not-started",
+  },
+  {
+    id: "day-78",
+    day: 78,
+    title: "Invitation",
+    description:
+      "Invite a person or team to something. It could be a wedding, a product launch party, or to join a new website.",
+    status: "not-started",
+  },
+  {
+    id: "day-79",
+    day: 79,
+    title: "Itinerary",
+    description:
+      "A packing list for Disneyland or summer camp, a course outline to learn coding, or anything. What's the purpose and what do the students or attendees need?",
+    status: "not-started",
+  },
+  {
+    id: "day-80",
+    day: 80,
+    title: "Date Picker",
+    description:
+      "Create a date picker for anything. You could make it look simple or give it a wild theme.",
+    status: "not-started",
+  },
+  {
+    id: "day-81",
+    day: 81,
+    title: "Status Update",
+    description:
+      "Design a status update. It could be for a notification bar, a progress indicator for a download that's complete, or something else.",
+    status: "not-started",
+  },
+  {
+    id: "day-82",
+    day: 82,
+    title: "Form",
+    description:
+      "Forms are a vital component for websites. People sign up to attend courses, to register for courses, complete surveys, and so much more. Making the forms beautiful will help encourage people to complete them. Don't overload them with too much information at once, but let them progress in small stages.",
+    status: "not-started",
+  },
+  {
+    id: "day-83",
+    day: 83,
+    title: "Button",
+    description:
+      "Buttons are so simple, yet can be so fun to create. Gradients, hover interactions, pulsing elements, sparkles, etc. There's an entire world of unique buttons to explore.",
+    status: "not-started",
+  },
+  {
+    id: "day-84",
+    day: 84,
+    title: "Badge",
+    description:
+      "Badges can be assigned to users to the number of years they've been on a platform, accomplishments they've made, etc. They can be fun and information.",
+    status: "not-started",
+  },
+  {
+    id: "day-85",
+    day: 85,
+    title: "Pagination",
+    description:
+      "Dealing with lots of information isn't easy. When there are hundreds of pages or components, things can get messy if there's no clear hierarchy. Design a pagination look and flow to make it simple.",
+    status: "not-started",
+  },
+  {
+    id: "day-86",
+    day: 86,
+    title: "Progress",
+    description:
+      "What's making progress and how does it work? It could be a progress bar showing time remaining in a movie or it could calculate the progress made reading a book. Anything you want.",
+    status: "not-started",
+  },
+  {
+    id: "day-87",
+    day: 87,
+    title: "Avatar",
+    description:
+      "Design an avatar. It could be for company logos or photos of an app's users. Take into consideration the corner rounding, size, placement, etc.",
+    status: "not-started",
+  },
+  {
+    id: "day-88",
+    day: 88,
+    title: "Sign Up Form",
+    description:
+      "Create a sign up page, modal, form, or app screen related to signing up for something. It could be for a volunteer event, contest registration, a giveaway, or anything you can image.",
+    status: "not-started",
+  },
+  {
+    id: "day-89",
+    day: 89,
+    title: "Agree to Terms",
+    description:
+      "Almost every app or website has legal terms. Signing up for a new product will generally require that users agree to the Terms of Service. It's not glamorous, but it's important.",
+    status: "not-started",
+  },
+  {
+    id: "day-90",
+    day: 90,
+    title: "Create New",
+    description:
+      "Create a design for a user to create something. Maybe it's a new document, a new design file, or a component such as creating a new column in a spreadsheet. ",
+    status: "not-started",
+  },
+  {
+    id: "day-91",
+    day: 91,
+    title: "Curated for You",
+    description:
+      "Design something that's been personalized such as a newsfeed, timeline, user profile, etc. It could even be book, travel, or product recommendations based on your purchases or browsing history.",
+    status: "not-started",
+  },
+  {
+    id: "day-92",
+    day: 92,
+    title: "Frequently Asked Questions",
+    description:
+      "Create some designs for an FAQ widget, section, or full page. Everyone has questions about products and brands that make answers easy to find are amazing. Happy customers, happy business.",
+    status: "not-started",
+  },
+  {
+    id: "day-93",
+    day: 93,
+    title: "Splash Screen",
+    description:
+      "Splash screens tend to occur right after someone opens an app. It's easy to overlook, but making a great first impression with your users is essential to building trust.",
+    status: "not-started",
+  },
+  {
+    id: "day-94",
+    day: 94,
+    title: "News",
+    description:
+      "News is occurring all around the world at all times. There's an ocean of content constantly being created.Design a nice interface for reading the news.",
+    status: "not-started",
+  },
+  {
+    id: "day-95",
+    day: 95,
+    title: "Product Tour",
+    description:
+      "What product is being showcased? Is it a physical product like a shoe or piece of art? Or is it a digital product? Whatever it is, it's up to you. Consider the most important features and use cases for the product. ",
+    status: "not-started",
+  },
+  {
+    id: "day-96",
+    day: 96,
+    title: "Currently In Stock",
+    description:
+      "Design a display, sequence or something related to items that are in stock (available). It could be food services, products, or inventory of another type.",
+    status: "not-started",
+  },
+  {
+    id: "day-97",
+    day: 97,
+    title: "Giveaway",
+    description:
+      "Product giveaways are fun for brands and for customers.Imagine a product you'd like to have and how you'd display it to incentivize customers to join.",
+    status: "not-started",
+  },
+  {
+    id: "day-98",
+    day: 98,
+    title: "Advertisement",
+    description:
+      "Not everyone likes seeing ads, but they're crucial for some products. Funny ads or inspiring ones tend to be remembered. Think of the products being offered and their intended audience. ",
+    status: "not-started",
+  },
+  {
+    id: "day-99",
+    day: 99,
+    title: "Categories",
+    description:
+      "Design a way to display different things such as people, photos, plants, products, etc. into different categories",
+    status: "not-started",
+  },
+  {
+    id: "day-100",
+    day: 100,
+    title: "Redesign Daily UI",
+    description:
+      "What would you change about the homepage? Or the design prompts? You could also redesign anything you'd like. :) ",
     status: "not-started",
   },
 ];

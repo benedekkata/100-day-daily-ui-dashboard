@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import CosmicButton from "./cosmic-button";
 
 /* Deliberately not using shadcn/ui components for this for learning purposes, but tailwind is allowed */
 function Day1Modal() {
@@ -16,19 +17,26 @@ function Day1Modal() {
   }, [isModal]);
 
   return (
-    <>
-      {isOpen ? (
-        <div>
-          <button onClick={() => setIsModal(false)}>Open as Modal</button>
-          <button onClick={() => setIsOpen(false)}>X</button>
-          {modalContent}
-        </div>
-      ) : (
-        <div className="flex flex-col flex-grow justify-center items-center ">
-          <button onClick={() => setIsOpen(true)}>Open Modal</button>
-        </div>
-      )}
-    </>
+    <div className="flex flex-col h-full justify-center items-center relative">
+      <img
+        src="/mesh-gradient.png"
+        alt="Mesh gradient background"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        {isOpen ? (
+          <div>
+            <button onClick={() => setIsModal(false)}>Open as Modal</button>
+            <button onClick={() => setIsOpen(false)}>X</button>
+            {modalContent}
+          </div>
+        ) : (
+          <CosmicButton onClick={() => setIsOpen(true)}>
+            Open Modal
+          </CosmicButton>
+        )}
+      </div>
+    </div>
   );
 }
 
