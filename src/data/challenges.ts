@@ -13,6 +13,7 @@ export interface Challenge {
   learnings?: string[];
   challenges?: string[];
   notes?: string;
+  technologies?: string[];
   component?: React.ComponentType;
 }
 
